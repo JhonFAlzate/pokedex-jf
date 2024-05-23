@@ -60,6 +60,17 @@
         filter:brightness(1.2); 
     }
 }
+
+.quantity_form {
+    width: 18m;
+   
+    max-width: 40em;
+    height: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 .two_form_select {
     width: 100%;
     max-width: 20em;

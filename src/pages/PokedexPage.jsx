@@ -81,9 +81,9 @@ const handlePages = e => {
                 <button className="two_btn">Search</button>
               </form>
 
-              <form className="two_form" onSubmit={handlePages} action="">
-                <input className="two_input" ref={inputName} type="text" placeholder="Quantity per page?" />
-                <button className="two_btn">Search</button>
+              <form className="quantity_form" onSubmit={handlePages} action="">
+                <input className="two_input quantiy quantity_input" ref={inputName} type="text" placeholder="Quantity per page?" />
+                <button className="two_btn quantity_btn">Search</button>
               </form>
 
               <form className="two_form_select" action="">
