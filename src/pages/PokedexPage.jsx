@@ -57,7 +57,14 @@ const pages= pokemons?.results.slice(startPages, limitPages)
 
 const totalPages = Math.ceil((pokemons?.results.length) / quantsPages)
 
+const cantPages = useRef()
 
+const handlePages = e => {
+  e.preventDefault()
+  setQuantsPages(inputName.current.value)
+
+
+}
 
 
   return (
@@ -71,6 +78,11 @@ const totalPages = Math.ceil((pokemons?.results.length) / quantsPages)
         <div className="two_form_container">
               <form className="two_form" onSubmit={handleSearch} action="">
                 <input className="two_input" ref={inputName} type="text" placeholder="Look for a pokemón" />
+                <button className="two_btn">Search</button>
+              </form>
+
+              <form className="two_form" onSubmit={handlePages} action="">
+                <input className="two_input" ref={inputName} type="text" placeholder="Quantity per page?" />
                 <button className="two_btn">Search</button>
               </form>
 

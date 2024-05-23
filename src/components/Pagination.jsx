@@ -18,7 +18,7 @@ const Pagination = ({currentPage, setCurrentPage, totalPages}) => {
   return (
     <div className="pagination_padre">
       <button className="pagination_btn" onClick={handleBefore}>⬅ Before</button>
-      <h3 className="pagination_title">{currentPage} --- {totalPages}</h3>
+      <h3 className="pagination_title">{currentPage} -- {totalPages}</h3>
       <button className="pagination_btn" onClick={handleAfter}>After ➡ </button>
     </div>
   )
