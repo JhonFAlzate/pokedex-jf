@@ -55,8 +55,8 @@ const startPages = limitPages - quantsPages
 
 const pages= pokemons?.results.slice(startPages, limitPages)
 
-const totalPages = (pokemons?.results.length) / quantsPages
-console.log(totalPages)
+const totalPages = Math.ceil((pokemons?.results.length) / quantsPages)
+
 
 
 
