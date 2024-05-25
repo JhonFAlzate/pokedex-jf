@@ -76,10 +76,10 @@ const handlePages = e => {
           
         <p className="two_welcome"><span className="two_welcom_i">Welcome {trainer}</span>, <span className="two_welcom_p">here you will find your favorite pokemon</span></p>
         <div className="two_form_container">
-              <form className="two_form" onSubmit={handleSearch} action="">
+              {/* <form className="two_form" onSubmit={handleSearch} action="">
                 <input className="two_input" ref={inputName} type="text" placeholder="Look for a pokemón" />
                 <button className="two_btn">Search</button>
-              </form>
+              </form> */}
 
               <form className="quantity_form" onSubmit={handlePages} action="">
                 <input className="two_input quantiy quantity_input" ref={inputName} type="text" placeholder="Quantity per page?" />
