@@ -22,11 +22,11 @@ useEffect( () => {
     <article className="info_article">
       <HeaderPages  />
 
-      <div className="info_body">
+      <div className="info_body ">
 
-        <section className="info_card">
+        <section className={`info_card poke border_${pokemon?.types[0].type.name}`}>
 
-          <header className="info_card_header">
+          <header className={`bg_${pokemon?.types[0].type.name}`}>
              <img className="info_card_img" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
           </header>
 
@@ -87,7 +87,7 @@ useEffect( () => {
 
         </section>
 
-        <div className="info_move_container">
+        <div className={`info_move_container poke border_${pokemon?.types[0].type.name}`}>
         <div className="info_card_stats_container">
                 <h3 className="info_card_stats">Movements</h3>
                 <hr className="info_card_stats_hr" />
