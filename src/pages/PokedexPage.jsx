@@ -53,15 +53,17 @@ const startPages = limitPages - quantsPages
 
 
 
-const pages= pokemons?.results.slice(startPages, limitPages)
+const pages= pokemons?.results.filter(callbackFilter).slice(startPages, limitPages)
 
 const totalPages = Math.ceil((pokemons?.results.length) / quantsPages)
 
-const cantPages = useRef()
+
+
+const inputPages = useRef()
 
 const handlePages = e => {
   e.preventDefault()
-  setQuantsPages(inputName.current.value)
+  setQuantsPages(inputPages.current.value)
 
 
 }
@@ -72,17 +74,19 @@ const handlePages = e => {
     <div className="two_container">
       
       <HeaderPages />
-        <section className="two_body">
+
+      <section className="two_body">
           
         <p className="two_welcome"><span className="two_welcom_i">Welcome {trainer}</span>, <span className="two_welcom_p">here you will find your favorite pokemon</span></p>
+       
         <div className="two_form_container">
-              {/* <form className="two_form" onSubmit={handleSearch} action="">
+              <form className="two_form" onSubmit={handleSearch} action="">
                 <input className="two_input" ref={inputName} type="text" placeholder="Look for a pokemón" />
                 <button className="two_btn">Search</button>
-              </form> */}
+              </form>
 
               <form className="quantity_form" onSubmit={handlePages} action="">
-                <input className="two_input quantiy quantity_input" ref={inputName} type="text" placeholder="Quantity per page?" />
+                <input className="two_input quantiy quantity_input" ref={inputPages} type="text" placeholder="Quantity per page?" />
                 <button className="two_btn quantity_btn">Search</button>
               </form>
 
@@ -107,7 +111,7 @@ const handlePages = e => {
               pokemons && pokemons.results.filter(callbackFilter).length === 0
               ? <h2 className="two_title_error">There are no pokemon that meet the filters </h2>
               :
-              ( pages?.filter(callbackFilter).map(poke =>(
+              ( pages?.map(poke =>(
                 <PokeCard 
                 key={poke.url}
                 poke = {poke}

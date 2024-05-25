@@ -20,6 +20,9 @@ const PokeCard = ({poke}) => {
 
 const handleNavDetail = () => {
   navigate(`/pokemon/${pokemon.name}`)
+  window.scrollTo({
+    top: 0,
+  })
 
 }
 
