@@ -7,6 +7,7 @@ import HeaderPages from "../components/HeaderPages"
 
 const PokeinfoPage = () => {
 
+
   const { name } = useParams()
 
 const [ pokemon, getPokemon] = UseFetch()
@@ -77,8 +78,9 @@ useEffect( () => {
 
           <ul className="info_card_stats_box">
               {
+                
                 pokemon?.stats.map(statInfo => (
-                  <li className="info_card_stats_list" key={statInfo.stat.url}><span className="stats_label">{statInfo.stat.name} </span ><span className={`poke_         stats_value text_${pokemon?.types[0].type.name}`}>{statInfo.base_stat} / 150</span></li>
+                  <li className="info_card_stats_list" key={statInfo.stat.url}><span className="stats_label">{statInfo.stat.name} </span > <span className={`poke_stats_value text_${pokemon?.types[0].type.name}`}>{statInfo.base_stat} / 150</span><hr className={`poke_br br_${statInfo.base_stat}`} style={{'--porcentaje': `${statInfo.base_stat}%`}}/></li>
                 ))
                 
               }
