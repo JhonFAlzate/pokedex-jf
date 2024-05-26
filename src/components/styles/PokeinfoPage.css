@@ -45,19 +45,19 @@
     width: 50%; 
 }
 @keyframes moverConstante {
-    0.% {
+    0.%, 100% {
         transform: translateX(0);
     }
-    50% {
-        transform: translateX(100px);
+    25% {
+        transform: translateX(80px);
     }
-    100% {
-        transform: translateX(-50%); /* Volver a la posición inicial */
+    50%, 75% {
+        transform: translateX(-50%); 
       }
  
 }
 .img_traslate {
-  animation: moverConstante 10s ease-in-out;
+  animation: moverConstante 10s linear;
  
 }
 .info_card_id {
