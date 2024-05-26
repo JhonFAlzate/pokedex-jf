@@ -28,7 +28,7 @@ useEffect( () => {
         <section className={`info_card poke border_${pokemon?.types[0].type.name}`}>
 
           <header className={`bg_${pokemon?.types[0].type.name}`}>
-             <img className="info_card_img" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
+             <img className="info_card_img img_traslate" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
           </header>
 
           <h3 className="info_card_id"># {pokemon?.id}</h3>
