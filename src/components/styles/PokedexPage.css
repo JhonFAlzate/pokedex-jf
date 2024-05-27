@@ -26,6 +26,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5em;
+    margin-top: 3em;
 }
 .two_form {
     width: 60%;
