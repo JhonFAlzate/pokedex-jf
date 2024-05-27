@@ -19,6 +19,9 @@ const [typeSelect, setTypeSelect] = useState('allPokemons')
 const [pokemons, getPokemons, getTypePokemon] = UseFetch()
 
 
+
+
+
 useEffect(() => {
 if(typeSelect === 'allPokemons') {
 
@@ -74,6 +77,7 @@ const handlePages = e => {
     <div className="two_container">
       
       <HeaderPages />
+     
 
       <section className="two_body">
           
