@@ -6,6 +6,7 @@ import SelectType from "../components/PokedexPage/SelectType"
 import '../components/styles/PokedexPage.css'
 import HeaderPages from "../components/HeaderPages"
 import Pagination from "../components/Pagination"
+import BackToTopButton from "../components/BackToTopButton"
 
 
 
@@ -77,7 +78,7 @@ const handlePages = e => {
     <div className="two_container">
       
       <HeaderPages />
-     
+     <BackToTopButton/>
 
       <section className="two_body">
           
